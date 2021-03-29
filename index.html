@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Biglietto Treno</title>
+</head>
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        
+        <!-- MAIN -->
+        <main>
+
+            <!-- title -->
+            <div class="title">            
+                <h2>Calcola il prezzo del tuo biglietto</h2>
+            </div>
+            <!-- end title -->
+
+            <!-- Ticket wrapper -->
+            <div class="ticket-wrapper">
+
+                <!-- ticket form -->
+                <div class="ticket-form">
+                    <!-- Name form -->
+                    <div class="each-form">
+                        <div class="each-label">
+                            <label for="name-surname-required">Nome e Cognome</label>                    
+                        </div>
+                        <div class="each-input">
+                            <input id="name-surname-required" type="text">
+                        </div>
+                    </div>
+                    <!-- end Name form -->
+
+                    <!-- Km form -->
+                    <div class="each-form">
+                        <div class="each-label">
+                            <label for="km-required">Km da percorrere</label>                    
+                        </div>
+                        <div class="each-input">
+                            <input id="km-required" type="text">
+                        </div>
+                    </div>
+                    <!--end  Km form -->
+
+                    <!-- Age form -->
+                    <div class="each-form">
+                        <div class="each-label">
+                            <label for="age-required">Fascia età</label>                    
+                        </div>
+                        <div class="each-input">
+                            <select name="" id="age-required">
+                                <option value="Minorenne">Minorenne</option>
+                                <option value="Maggiorenne">Maggiorenne</option>
+                                <option value="Over">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- end Age form -->
+
+                </div>
+                <!-- end ticket form -->
+
+
+                <!-- Button -->
+                <div class="btn-container">
+                    <button class="grey-btn">Genera</button>
+                    <button class="grey-btn">Annulla</button>
+                </div>
+                <!-- end Button -->
+                
+
+            </div>
+            <!-- end ticket wrapper -->
+
+            <!-- Your Own Ticket -->
+            <div>
+                
+            </div>
+            <!-- end Your Own Ticket -->
+
+        </main>
+        <!-- end MAIN -->
+        
+
+    </div>
+    <!-- end wrapper -->
+
+
+    <!-- link javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- end link javascript -->
+</body>
+</html>
