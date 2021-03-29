@@ -13,7 +13,7 @@ generatesButton.addEventListener('click', function() {
     var  nomeDaInserire = document.getElementById('name-surname-required');
     var userName = nomeDaInserire.value;    
     
-    document.getElementById('passenger-name').innerHTML = userName;
+    
 
     //Offerta: confrontiamo input age e km per generare il prezzo del biglietto
     //
@@ -29,33 +29,48 @@ generatesButton.addEventListener('click', function() {
     var kmUtenteNumber = parseInt(kmUtente);
     console.log(kmUtenteNumber);
 
-    // fare il calcolo del prezzo e inserirlo
-    var prezzoBiglietto = kmUtenteNumber * 0.21;  
+    // Calcolo prezzo in base ai km
+    var prezzoBiglietto = kmUtenteNumber * 0.21;
+    //
+    // Offerta in base all'età
+    
+    var offertaPasseggeri = 'Prezzo Standard' 
     
     // 
-    // calcolare il prezzo differente in base all'età e stabilire l'offerta
+    // Prezzo differente in base all'età e stabilire l'offerta
 
     if ( passengerAge == 'minorenne' ) {
-
+        offertaPasseggeri = 'Sconto Minorenni'
         prezzoBiglietto = prezzoBiglietto -(prezzoBiglietto * 0.2);
 
     } else if( passengerAge == 'over') {
-
+        offertaPasseggeri = 'Sconto Over 65'
         prezzoBiglietto = prezzoBiglietto -(prezzoBiglietto * 0.4);
     }
+
+
+    // Carrozza
+    var numeroCarrozza = Math.floor(Math.random() * 10) + 1;
+
+    // Codice CP
+    var cpCodeElement = getRndInteger(90000,100000);
+    
+
+    // OUTPUT
+    document.getElementById('passenger-name').innerHTML = userName;
+    document.getElementById('user-offer').innerHTML = offertaPasseggeri; 
+    document.getElementById('cab-number').innerHTML = numeroCarrozza; 
+    document.getElementById('cp-code').innerHTML =  cpCodeElement;
     document.getElementById('final-price').innerHTML = prezzoBiglietto.toFixed(2) + '€';
-
-
-
-
     
-     
-    
- 
-     
-
-    //numero carrozza
+      
     
 })
 
 // Se clicchiamo su annulla dobbiamo ripulire il form e nascondere la sezione col biglietto.
+
+
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
