@@ -29,7 +29,7 @@
 /* MAIN */
 .ticket-wrapper {
     width: 60%;
-    margin: auto;
+    margin: auto;    
     background-color: white;
     border-radius: 10px;
 }
@@ -73,9 +73,15 @@
 }
 
 /* Your Own Ticket */
-.your-own-ticket {
+#hidden-section {
     padding: 20px 0;
+    visibility: hidden;
 }
+
+.show-section {
+    visibility: visible;
+}
+
 .your-own-ticket-inner {
     padding: 25px;
     width: 60%;

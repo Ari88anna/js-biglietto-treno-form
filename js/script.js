@@ -7,7 +7,11 @@
 // Se clicchiamo su Genera, la sezione col biglietto apparirà e sarà popolata coi dati del biglietto
 var generatesButton = document.getElementById('generates-btn');
 generatesButton.addEventListener('click', function() {
-    
+
+    //la sezione col biglietto deve apparire
+    var sezioneNascosta = document.getElementById('hidden-section');
+    sezioneNascosta.style.visibility = 'visible';  
+
 
     // Nome passeggero
     var  nomeDaInserire = document.getElementById('name-surname-required');
@@ -50,10 +54,10 @@ generatesButton.addEventListener('click', function() {
 
 
     // Carrozza
-    var numeroCarrozza = Math.floor(Math.random() * 10) + 1;
+    var numeroCarrozza = getRndInteger( 1 , 10)
 
     // Codice CP
-    var cpCodeElement = getRndInteger(90000,100000);
+    var cpCodeElement = getRndInteger( 90000 , 100000 );
     
 
     // OUTPUT
@@ -61,16 +65,29 @@ generatesButton.addEventListener('click', function() {
     document.getElementById('user-offer').innerHTML = offertaPasseggeri; 
     document.getElementById('cab-number').innerHTML = numeroCarrozza; 
     document.getElementById('cp-code').innerHTML =  cpCodeElement;
-    document.getElementById('final-price').innerHTML = prezzoBiglietto.toFixed(2) + '€';
-    
+    document.getElementById('final-price').innerHTML = prezzoBiglietto.toFixed(2) + '€';    
       
     
-})
+}
+)
 
 // Se clicchiamo su annulla dobbiamo ripulire il form e nascondere la sezione col biglietto.
+var cancelButton = document.getElementById('cancel-btn');
 
+cancelButton.addEventListener('click', function() {
+    // ripulire il form
+    document.getElementById('age-required').value ='minorenne';
+    document.getElementById('name-surname-required').value = '';
+    document.getElementById('km-required').value = '';
 
+    //la sezione col biglietto deve scomparire
+    var sezioneNascosta = document.getElementById('hidden-section');
+    sezioneNascosta.style.visibility = 'hidden';  
+    
+}
+)
 
+//funzione per generare un numero random
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
-  }
+}
