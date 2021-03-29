@@ -57,16 +57,14 @@ generatesButton.addEventListener('click', function() {
     var numeroCarrozza = getRndInteger( 1 , 10)
 
     // Codice CP
-    var cpCodeElement = getRndInteger( 90000 , 100000 );
-    
+    var cpCodeElement = getRndInteger( 90000 , 100000 );    
 
     // OUTPUT
     document.getElementById('passenger-name').innerHTML = userName;
     document.getElementById('user-offer').innerHTML = offertaPasseggeri; 
     document.getElementById('cab-number').innerHTML = numeroCarrozza; 
     document.getElementById('cp-code').innerHTML =  cpCodeElement;
-    document.getElementById('final-price').innerHTML = prezzoBiglietto.toFixed(2) + '€';    
-      
+    document.getElementById('final-price').innerHTML = prezzoBiglietto.toFixed(2) + '€';        
     
 }
 )

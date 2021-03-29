@@ -50,8 +50,9 @@
 .ticket-form .each-input select,
 .ticket-form .each-input input {
     border-radius: 5px;
-    padding: 2px;
-    border: 1px solid darkviolet;
+    padding: 5px;
+    border: 2px solid darkviolet;
+    text-align: center;
 }
 
 /* button */
@@ -78,10 +79,6 @@
     visibility: hidden;
 }
 
-.show-section {
-    visibility: visible;
-}
-
 .your-own-ticket-inner {
     padding: 25px;
     width: 60%;
@@ -90,38 +87,40 @@
 }
 
 .passenger-details {
-    content: "";
-    display: table;
-    clear: both;   
-    border-top: 1 px solid lightgrey;
+    display: flex ;  
+    border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    margin-top: 30px;
-    width: 100%;
-    
+    margin-top: 5px;
+    height: 200px;   
 }
 
-.passenger-data,
-.ticket-details {
-    float: left;
-}
-
-.passenger-data {
-    width: 150px;
-    height: 100px;
+.passenger-data {    
     background: grey;
+    padding: 0 25px;
+}
+
+.passenger-data h3 {
+    text-transform: uppercase;
+}
+
+#passenger-name {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .ticket-details{
-    width: calc( 100% - 150px );
-    height: 100px;
+    width: calc( 100% - 200px );   
 }
 
 .ticket-data {
     height: 100%;
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around;       
+}
+
+.ticket-data li h4 {
+    padding: 50px 0;
 }
 
 
