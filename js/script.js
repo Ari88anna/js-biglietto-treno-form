@@ -4,3 +4,8 @@
 // Categoria selezionata dall'utente
 // Se clicchiamo su Genera, la sezione col biglietto apparirà e sarà popolata coi dati del biglietto
 // Se clicchiamo su annulla dobbiamo ripulire il form e nascondere la sezione col biglietto.
+
+var generatesButton = document.getElementById('generates-btn');
+generatesButton.addEventListener('click', function() {
+    alert('cliccato');
+})
