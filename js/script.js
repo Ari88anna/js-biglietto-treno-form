@@ -7,5 +7,12 @@
 
 var generatesButton = document.getElementById('generates-btn');
 generatesButton.addEventListener('click', function() {
-    alert('cliccato');
+
+    var  nomeDaInserire = document.getElementById('name-surname-required');
+    var userName = nomeDaInserire.value;
+    console.log(userName);
+
+    
+    document.getElementById('passenger-name').innerHTML = userName;
+    
 })
